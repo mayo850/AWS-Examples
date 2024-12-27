@@ -1,0 +1,7 @@
+# List the start up tasks. Learn more: https://www.gitpod.io/docs/configure/workspaces/tasks
+tasks:
+  - name: aws cli
+    init: echo 'init script' # runs during prebuild => https://www.gitpod.io/docs/configure/projects/prebuilds
+    before: 
+          msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
+
