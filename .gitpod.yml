@@ -3,5 +3,7 @@ tasks:
   - name: aws cli
     init: echo 'init script' # runs during prebuild => https://www.gitpod.io/docs/configure/projects/prebuilds
     before: 
-          msiexec.exe /i https://awscli.amazonaws.com/AWSCLIV2.msi
+          curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+          unzip awscliv2.zip
+          sudo ./aws/install
 
